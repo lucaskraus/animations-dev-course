@@ -6,14 +6,13 @@ A collection of animation exercises and patterns from [Emil Kowalski's](https://
 
 ## About
 
-This repository serves as a practical reference for modern web animation patterns, covering techniques and best practices taught in the course. Each exercise demonstrates production-ready animation implementations using React, TypeScript, and CSS.
+This repository serves as a practical reference for modern web animation patterns, covering techniques and best practices taught in the course. Each exercise demonstrates production-ready animation implementations using React, TypeScript, Framer and CSS.
 
 ## Tech Stack
 
 - **React** with TypeScript
-- **Vite** for fast development and building
 - **CSS** for animations and styling
-- React Compiler enabled for optimized performance
+- **Framer** for complex animations with interactions and states
 
 ## Getting Started
 
