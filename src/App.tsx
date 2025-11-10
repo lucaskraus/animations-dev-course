@@ -1,8 +1,12 @@
 function App() {
 
   return (
-    <div className='flex flex-col h-screen items-center p-24'>
-      <h2 className='text-2xl font-bold'>Animations Dev Course</h2>
+    <div className='flex flex-col h-screen items-center p-24 gap-12'>
+      <h1 className='text-3xl font-medium'>Animations Dev Course</h1>
+
+      <div className="flex flex-col items-center w-full">
+        <h3>Text Reveal</h3>
+      </div>
     </div>
   )
 }
