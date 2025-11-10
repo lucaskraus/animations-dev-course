@@ -19,7 +19,7 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: #FAD757;
-    animation: orbit 6s linear;
+    animation: orbit 4s linear;
     animation-iteration-count: infinite;
 }
 
