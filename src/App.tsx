@@ -11,7 +11,7 @@ function App() {
         </p>
       </div>
 
-      <div className="flex flex-row items-center w-full gap-16 justify-center">
+      <div className="flex flex-row items-center w-full gap-10 justify-center">
         <div className="rounded-full bg-blue-500 py-2 px-4">
           <h3 className="text-2xl font-medium text-white">Text Reveal</h3>
         </div>
