@@ -1,4 +1,4 @@
-# Web Animations Course Exercises
+# Animations on the Web Course Exercises
 
 A collection of animation exercises and patterns from [Emil Kowalski's](https://twitter.com/emilkowalski_) **Animations on the Web** course.
 
