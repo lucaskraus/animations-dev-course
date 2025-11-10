@@ -118,3 +118,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+.blink {
+  width: 2px;
+  height: 1.5em;
+  background-color: gray;
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -6,7 +6,10 @@ function App() {
   return (
     <div className='flex flex-col h-screen items-center p-20 gap-12'>
       <div className="flex flex-col items-center gap-2.5">
-        <h1 className='text-3xl font-medium'>animations.dev</h1>
+        <div className="flex flex-row items-center">
+          <h1 className='text-3xl font-medium'>animations.dev</h1>
+          <div className="blink"></div>
+        </div>
         <p className="text-base text-gray-500">
           Exercises from Animations on the Web course by @emilkowalski_
         </p>
