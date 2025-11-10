@@ -119,7 +119,21 @@
   }
 }
 
-.button-text-reveal {
+/* Text Reveal Component */
+.h1-reveal {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  overflow: hidden;
+}
+
+.span-reveal {
+  display: inline-block;
+  animation: reveal 1.3s cubic-bezier(0.19, 1, 0.22, 1) backwards;
+  animation-delay: calc(var(--index) * 0.03s);
+}
+
+.button-reveal {
   width: 100%;
   margin-top: 24px;
   position: relative;
@@ -132,4 +146,15 @@
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+
+@keyframes reveal {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
