@@ -17,6 +17,13 @@ function App() {
         </div>
         <TextReveal />
       </div>
+
+      <div className="flex flex-row items-center w-full gap-10 justify-center">
+        <div className="rounded-full bg-blue-500 py-2 px-4">
+          <h3 className="text-2xl font-medium text-white">Orbit Loader</h3>
+        </div>
+        <TextReveal />
+      </div>
     </div>
   )
 }

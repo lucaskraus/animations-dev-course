@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./TextReveal.css";
+import "./index.css";
 
 export default function TextReveal() {
     const [counter, setCounter] = useState(0);
