@@ -6,7 +6,7 @@ function App() {
     <div className='flex flex-col h-screen items-center p-24 gap-12'>
       <div className="flex flex-col items-center gap-2">
         <h1 className='text-3xl font-medium'>Animations Dev Course</h1>
-        <p className="text-sm text-gray-500">
+        <p className="text-base text-gray-500">
           Exercises from Animations on the Web course by @emilkowalski_
         </p>
       </div>
