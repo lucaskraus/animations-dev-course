@@ -1,3 +1,5 @@
+import TextReveal from "./components/TextReveal";
+
 function App() {
 
   return (
@@ -6,6 +8,7 @@ function App() {
 
       <div className="flex flex-col items-center w-full">
         <h3>Text Reveal</h3>
+        <TextReveal />
       </div>
     </div>
   )
