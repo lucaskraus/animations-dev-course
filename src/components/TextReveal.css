@@ -8,8 +8,9 @@ h1 {
 
 h1 span {
   display: inline-block;
-  animation: reveal 1.3s cubic-bezier(0.19, 1, 0.22, 1) backwards;
+  animation: reveal 1.3s cubic-bezier(0.19, 1, 0.22, 1);
   animation-delay: calc(var(--index) * 0.03s);
+  animation-fill-mode: backwards;
 }
 
 button {
