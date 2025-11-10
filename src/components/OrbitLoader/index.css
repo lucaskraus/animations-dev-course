@@ -7,7 +7,7 @@
     height: 96px;
     width: 96px;
     border-radius: 50%;
-    background: #21201C;
+    background: #FAD757;
 }
   
 .orbiting-circle {
@@ -18,7 +18,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: #FAD757;
+    background: #3284ee;
     animation: orbit 4s linear;
     animation-iteration-count: infinite;
 }
