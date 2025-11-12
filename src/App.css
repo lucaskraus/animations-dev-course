@@ -121,7 +121,7 @@
 
 .blink {
   width: 2px;
-  height: 1.5em;
+  height: 1.6em;
   background-color: #b6b6b6;
   animation: blink 1s;
   animation-iteration-count: infinite;
