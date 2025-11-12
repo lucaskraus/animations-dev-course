@@ -1,5 +1,6 @@
 import TextReveal from "./components/TextReveal";
 import OrbitLoader from "./components/OrbitLoader";
+import ButtonReveal from "./components/ButtonReveal";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
         </p>
       </div>
 
-      <div className="flex max-w-lg w-full mx-auto flex-col gap-12">
+      <div className="flex max-w-xl w-full mx-auto flex-col gap-12">
         <div className="flex flex-row items-center w-full gap-10 justify-between">
           <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
             <h3 className="text-xl font-medium text-white">Text Reveal</h3>
@@ -28,6 +29,15 @@ function App() {
             <h3 className="text-xl font-medium text-white">Orbit Loader</h3>
           </div>
           <OrbitLoader />
+        </div>
+
+        <div className="flex flex-row items-center w-full gap-10 justify-between">
+          <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
+            <h3 className="text-xl font-medium text-white">Reveal with clip path</h3>
+          </div>
+          <div>
+            <ButtonReveal />
+          </div>
         </div>
       </div>
     </div>
