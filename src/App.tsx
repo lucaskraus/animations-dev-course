@@ -11,9 +11,9 @@ function App() {
           <h1 className='text-3xl font-medium'>animations.dev</h1>
           <div className="blink"></div>
         </div>
-        <p className="text-base text-gray-500">
-          Exercises from Animations on the Web course by @emilkowalski_
-        </p>
+        <span className="text-base text-gray-500">
+          Exercises from <a href="https://animations.dev" target="_blank" className="text-blue-500">Animations on the Web</a> course by @emilkowalski_
+        </span>
       </div>
 
       <div className="flex max-w-xl w-full mx-auto flex-col gap-12">
