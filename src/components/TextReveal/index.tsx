@@ -13,7 +13,7 @@ export default function TextReveal() {
                     ))}
                 </h1>
             </div>
-            <button className="button-reveal" onClick={() => setCounter(counter + 1)}>
+            <button className="button-text-reveal" onClick={() => setCounter(counter + 1)}>
                 Replay animation
             </button>
         </div>

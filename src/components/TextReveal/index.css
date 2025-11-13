@@ -13,7 +13,7 @@ h1 span {
   animation-fill-mode: backwards;
 }
 
-button {
+.button-text-reveal {
   width: 100%;
   margin-top: 24px;
   position: relative;

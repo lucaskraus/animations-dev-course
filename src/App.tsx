@@ -36,7 +36,7 @@ function App() {
           <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
             <h3 className="text-sm lg:text-xl text-center font-medium text-white">Reveal clip-path</h3>
           </div>
-          <div className="flex pb-5">
+          <div className="flex ">
             <ButtonReveal />
           </div>
         </div>
@@ -45,7 +45,7 @@ function App() {
           <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
             <h3 className="text-sm lg:text-xl text-center font-medium text-white">Copy to Clipboard</h3>
           </div>
-          <div className="flex pb-5">
+          <div className="flex">
             <CopyToClipboard />
           </div>
         </div>
