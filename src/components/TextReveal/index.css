@@ -1,15 +1,15 @@
 /* Text Reveal Component */
-h1 {
+.h1-reveal {
   font-size: 32px;
   font-weight: 600;
   letter-spacing: -0.05em;
   overflow: hidden;
 }
 
-h1 span {
+.span-reveal {
   display: inline-block;
   animation: reveal 1.3s cubic-bezier(0.19, 1, 0.22, 1);
-  animation-delay: calc(var(--index) * 0.03s);
+  animation-delay: calc(var(--index) * 1s);
   animation-fill-mode: backwards;
 }
 
