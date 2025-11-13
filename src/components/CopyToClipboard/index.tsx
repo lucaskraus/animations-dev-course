@@ -28,7 +28,7 @@ export default function CopyToClipboard() {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                style={{ color: "gray" }}
+                style={{ color: "green" }}
             >
                 <CheckIcon className="w-5 h-5" />
             </motion.span>
