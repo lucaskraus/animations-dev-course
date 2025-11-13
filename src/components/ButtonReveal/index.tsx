@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function ButtonReveal() {
     return (
-        <button className="button">
+        <button className="button-reveal">
             <div className="reveal-container">
                 <svg height="16" strokeLinejoin="round" viewBox="0 0 16 16" width="16">
                     <path

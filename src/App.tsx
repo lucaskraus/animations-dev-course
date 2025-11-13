@@ -1,6 +1,7 @@
 import TextReveal from "./components/TextReveal";
 import OrbitLoader from "./components/OrbitLoader";
 import ButtonReveal from "./components/ButtonReveal";
+import CopyToClipboard from "./components/CopyToClipboard";
 
 function App() {
 
@@ -37,6 +38,15 @@ function App() {
           </div>
           <div className="flex pb-5">
             <ButtonReveal />
+          </div>
+        </div>
+
+        <div className="flex flex-row items-center w-full gap-10 justify-between">
+          <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
+            <h3 className="text-sm lg:text-xl text-center font-medium text-white">Copy to Clipboard</h3>
+          </div>
+          <div className="flex pb-5">
+            <CopyToClipboard />
           </div>
         </div>
       </div>

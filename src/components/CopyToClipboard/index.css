@@ -1,0 +1,11 @@
+.copy-button {
+    position: relative;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #f6f5f5;
+    padding: 12px;
+    font-weight: 500;
+    color: #21201c;
+}
