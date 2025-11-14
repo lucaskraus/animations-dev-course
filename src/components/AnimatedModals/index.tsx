@@ -87,45 +87,47 @@ export default function SharedLayout() {
         ) : null}
       </AnimatePresence>
       <ul className={styles.list}>
-        {GAMES.map((game) => (
-          <motion.li
-            layoutId={`card-${game.title}`}
-            key={game.title}
-            onClick={() => setActiveGame(game)}
-            style={{ borderRadius: 8 }}
-          >
-            <motion.img
-              layoutId={`image-${game.title}`}
-              height={56}
-              width={56}
-              alt=""
-              src={game.image}
-              style={{ borderRadius: 12 }}
-            />
-            <div className={styles.gameWrapper}>
-              <div className={styles.contentWrapper}>
-                <motion.h2
-                  layoutId={`title-${game.title}`}
-                  className={styles.gameTitle}
+        {GAMES.map((game) =>
+          activeGame?.title === game.title ? null : (
+            <motion.li
+              layoutId={`card-${game.title}`}
+              key={game.title}
+              onClick={() => setActiveGame(game)}
+              style={{ borderRadius: 8 }}
+            >
+              <motion.img
+                layoutId={`image-${game.title}`}
+                height={56}
+                width={56}
+                alt=""
+                src={game.image}
+                style={{ borderRadius: 12 }}
+              />
+              <div className={styles.gameWrapper}>
+                <div className={styles.contentWrapper}>
+                  <motion.h2
+                    layoutId={`title-${game.title}`}
+                    className={styles.gameTitle}
+                  >
+                    {game.title}
+                  </motion.h2>
+                  <motion.p
+                    layoutId={`description-${game.title}`}
+                    className={styles.gameDescription}
+                  >
+                    {game.description}
+                  </motion.p>
+                </div>
+                <motion.button
+                  layoutId={`button-${game.title}`}
+                  className={styles.button}
                 >
-                  {game.title}
-                </motion.h2>
-                <motion.p
-                  layoutId={`description-${game.title}`}
-                  className={styles.gameDescription}
-                >
-                  {game.description}
-                </motion.p>
+                  Get
+                </motion.button>
               </div>
-              <motion.button
-                layoutId={`button-${game.title}`}
-                className={styles.button}
-              >
-                Get
-              </motion.button>
-            </div>
-          </motion.li>
-        ))}
+            </motion.li>
+          )
+        )}
       </ul>
     </>
   );
