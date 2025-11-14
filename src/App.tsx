@@ -1,15 +1,14 @@
-import TextReveal from "./components/TextReveal";
-import OrbitLoader from "./components/OrbitLoader";
-import ButtonReveal from "./components/ButtonReveal";
-import CopyToClipboard from "./components/CopyToClipboard";
-import AnimatedModals from "./components/AnimatedModals";
-import { TAB_MENU } from "./constants";
+import { TAB_MENU } from "./constants.tsx";
 import { useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { clsx } from "clsx";
 
 function App() {
   const [activeTab, setActiveTab] = useState<string>(TAB_MENU[0].id);
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
   return (
     <div className="flex flex-col h-screen items-center p-4 lg:p-20 gap-12">
@@ -53,17 +52,25 @@ function App() {
         ))}
       </div>
 
-      <div className="flex flex-col">
-        {activeTab === "text-reveal" ? <TextReveal /> : null}
-
-        {activeTab === "orbit-loader" ? <OrbitLoader /> : null}
-
-        {activeTab === "reveal-clip-path" ? <ButtonReveal /> : null}
-
-        {activeTab === "copy-to-clipboard" ? <CopyToClipboard /> : null}
-
-        {activeTab === "modals" ? <AnimatedModals /> : null}
-      </div>
+      <AnimatePresence mode="wait" initial={false}>
+        {(() => {
+          const activeTabData = TAB_MENU.find((tab) => tab.id === activeTab);
+          return activeTabData ? (
+            <motion.div
+              key={activeTabData.id}
+              className={activeTabData.id}
+              data-tab-id={activeTabData.id}
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              transition={{ duration: 0.1 }}
+            >
+              {activeTabData.component()}
+            </motion.div>
+          ) : null;
+        })()}
+      </AnimatePresence>
     </div>
   );
 }
