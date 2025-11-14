@@ -1,0 +1,38 @@
+.buttonHoldReveal {
+  position: relative;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9999px;
+  padding-inline: 24px;
+  font-weight: 500;
+  color: #21201c;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.buttonHoldReveal:active {
+  transform: scale(0.97);
+}
+
+.revealContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  background-color: #ffdbdc;
+  color: #e5484d;
+  border-radius: 9999px;
+  gap: 0.5rem;
+  clip-path: inset(0px 100% 0px 0px);
+  transition: clip-path 0.2s ease-out;
+}
+
+.buttonHoldReveal:active .revealContainer {
+  clip-path: inset(0px 0px 0px 0px);
+  transition: clip-path 1.5s linear;
+}

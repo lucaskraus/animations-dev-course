@@ -1,19 +1,19 @@
 /* Text Reveal Component */
-.h1-reveal {
+.h1Reveal {
   font-size: 32px;
   font-weight: 600;
   letter-spacing: -0.05em;
   overflow: hidden;
 }
 
-.span-reveal {
+.spanReveal {
   display: inline-block;
   animation: reveal 1.3s cubic-bezier(0.19, 1, 0.22, 1);
-  animation-delay: calc(var(--index) * 1s);
+  animation-delay: calc(var(--index) * 0.03s);
   animation-fill-mode: backwards;
 }
 
-.button-text-reveal {
+.buttonTextReveal {
   width: 100%;
   margin-top: 24px;
   position: relative;
@@ -37,4 +37,3 @@
     transform: translateY(0);
   }
 }
-

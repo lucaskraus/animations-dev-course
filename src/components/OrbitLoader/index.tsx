@@ -1,10 +1,10 @@
-import "./index.css";
+import styles from "./index.module.css";
 
 export default function OrbitLoader() {
-    return (
-        <div className="wrapper">
-            <div className="circle" />
-            <div className="orbiting-circle" />
-        </div>
-    )
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.circle} />
+      <div className={styles.orbitingCircle} />
+    </div>
+  );
 }

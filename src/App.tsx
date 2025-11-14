@@ -2,56 +2,70 @@ import TextReveal from "./components/TextReveal";
 import OrbitLoader from "./components/OrbitLoader";
 import ButtonReveal from "./components/ButtonReveal";
 import CopyToClipboard from "./components/CopyToClipboard";
+import AnimatedModals from "./components/AnimatedModals";
+import { TAB_MENU } from "./constants";
+import { useState } from "react";
+import { motion } from "motion/react";
+import { clsx } from "clsx";
 
 function App() {
+  const [activeTab, setActiveTab] = useState<string>(TAB_MENU[0].id);
 
   return (
-    <div className='flex flex-col h-screen items-center p-4 lg:p-20 gap-12'>
+    <div className="flex flex-col h-screen items-center p-4 lg:p-20 gap-12">
       <div className="flex flex-col items-center gap-2.5">
         <div className="flex flex-row items-center">
-          <h1 className='text-3xl font-medium'>animations.dev</h1>
+          <h1 className="text-3xl font-medium">animations.dev</h1>
           <div className="blink"></div>
         </div>
         <span className="text-base text-gray-500">
-          Exercises from <a href="https://animations.dev" target="_blank" className="text-blue-500">Animations on the Web</a> course by @emilkowalski_
+          Exercises from{" "}
+          <a
+            href="https://animations.dev"
+            target="_blank"
+            className="text-blue-500"
+          >
+            Animations on the Web
+          </a>{" "}
+          course by @emilkowalski_
         </span>
       </div>
 
-      <div className="flex max-w-none lg:max-w-xl w-full mx-auto flex-col gap-12">
-        <div className="flex flex-row items-center w-full gap-10 justify-between">
-          <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
-            <h3 className="text-sm lg:text-xl text-center font-medium text-white">Text Reveal</h3>
-          </div>
-          <TextReveal />
-        </div>
-
-        <div className="flex flex-row items-center w-full gap-10 justify-between">
-          <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
-            <h3 className="text-sm lg:text-xl text-center font-medium text-white">Orbit Loader</h3>
-          </div>
-          <OrbitLoader />
-        </div>
-
-        <div className="flex flex-row items-center w-full gap-10 justify-between">
-          <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
-            <h3 className="text-sm lg:text-xl text-center font-medium text-white">Reveal clip-path</h3>
-          </div>
-          <div className="flex ">
-            <ButtonReveal />
-          </div>
-        </div>
-
-        <div className="flex flex-row items-center w-full gap-10 justify-between">
-          <div className="rounded-full bg-blue-500 py-2 px-4 w-fit">
-            <h3 className="text-sm lg:text-xl text-center font-medium text-white">Copy to Clipboard</h3>
-          </div>
-          <div className="flex">
-            <CopyToClipboard />
-          </div>
-        </div>
+      <div className="flex flex-row items-center gap-2">
+        {TAB_MENU.map((tab) => (
+          <motion.div
+            layout
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={clsx(
+              "relative cursor-pointer px-2 py-1 text-sm outline-none transition-colors",
+              activeTab === tab.id ? "text-gray-800" : "text-gray-700"
+            )}
+          >
+            {activeTab === tab.id ? (
+              <motion.div
+                layoutId="tab-indicator"
+                className="absolute inset-0 rounded-lg bg-black/5"
+              />
+            ) : null}
+            <span className="relative text-inherit">{tab.title}</span>
+          </motion.div>
+        ))}
       </div>
+
+      <motion.div layout className="flex flex-col">
+        {activeTab === "text-reveal" ? <TextReveal /> : null}
+
+        {activeTab === "orbit-loader" ? <OrbitLoader /> : null}
+
+        {activeTab === "reveal-clip-path" ? <ButtonReveal /> : null}
+
+        {activeTab === "copy-to-clipboard" ? <CopyToClipboard /> : null}
+
+        {activeTab === "modals" ? <AnimatedModals /> : null}
+      </motion.div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
