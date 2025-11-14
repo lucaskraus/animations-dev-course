@@ -1,12 +1,10 @@
-import { GAMES, type Game } from "./constants";
-import { motion, AnimatePresence } from "motion/react";
-import { useState, type RefObject } from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
+import { useEffect, useState, useRef, type RefObject } from "react";
 import { useOnClickOutside } from "usehooks-ts";
+import { motion, AnimatePresence } from "motion/react";
+import { GAMES, type Game } from "./constants";
 import styles from "./index.module.css";
 
-export default function AnimatedModals() {
+export default function SharedLayout() {
   const [activeGame, setActiveGame] = useState<Game | null>(null);
   const ref = useRef<HTMLDivElement>(null);
   useOnClickOutside(ref as RefObject<HTMLElement>, () => setActiveGame(null));
