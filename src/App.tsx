@@ -53,7 +53,7 @@ function App() {
         ))}
       </div>
 
-      <motion.div layout className="flex flex-col">
+      <div className="flex flex-col">
         {activeTab === "text-reveal" ? <TextReveal /> : null}
 
         {activeTab === "orbit-loader" ? <OrbitLoader /> : null}
@@ -63,7 +63,7 @@ function App() {
         {activeTab === "copy-to-clipboard" ? <CopyToClipboard /> : null}
 
         {activeTab === "modals" ? <AnimatedModals /> : null}
-      </motion.div>
+      </div>
     </div>
   );
 }
