@@ -64,7 +64,7 @@ function App() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              transition={{ duration: 0.1 }}
+              transition={{ ease: "easeOut", duration: 0.2 }}
             >
               {activeTabData.component()}
             </motion.div>
